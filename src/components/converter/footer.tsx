@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Layers } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -11,9 +11,13 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-2 group" aria-label="Pixora Home">
-            <div className="flex h-6 w-6 items-center justify-center rounded-[99px] bg-[#95653E] text-[#F8F3E9]">
-              <Layers className="h-3.5 w-3.5" />
-            </div>
+            <Image
+              src="/pixora-symbol.png"
+              alt="Pixora Symbol"
+              width={22}
+              height={28}
+              className="h-5 w-auto transition-transform group-hover:scale-105"
+            />
             <span className="text-[14px] font-bold tracking-tight text-[#25221E]">
               Pixora<span className="text-[#95653E]">.</span>
             </span>

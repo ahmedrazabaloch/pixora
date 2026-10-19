@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Layers, ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
@@ -22,10 +23,15 @@ export function Header() {
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2 group" aria-label="Pixora Home">
-          <div className="flex h-7 w-7 items-center justify-center rounded-[99px] bg-[#95653E] text-[#F8F3E9]">
-            <Layers className="h-4 w-4" />
-          </div>
-          <span className="text-[16px] font-bold tracking-tight text-[#25221E]">
+          <Image
+            src="/pixora-symbol.png"
+            alt="Pixora Symbol"
+            width={28}
+            height={36}
+            priority
+            className="h-7 w-auto transition-transform group-hover:scale-105"
+          />
+          <span className="text-[17px] font-bold tracking-tight text-[#25221E]">
             Pixora<span className="text-[#95653E] ml-0.5">.</span>
           </span>
         </Link>

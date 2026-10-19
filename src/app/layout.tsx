@@ -31,6 +31,17 @@ export const metadata: Metadata = {
     description:
       "Batch convert images to WebP directly in your browser with zero server uploads.",
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/pixora-symbol.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "pixora",
     "webp converter",

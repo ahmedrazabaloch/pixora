@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   ShieldCheck,
@@ -21,6 +22,17 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/pixora-symbol.png"
+              alt="Pixora Logo"
+              width={72}
+              height={94}
+              priority
+              className="h-16 w-auto transition-transform hover:scale-105"
+            />
+          </div>
+
           <h1 className="text-[32px] sm:text-[48px] md:text-[56px] font-bold tracking-tight text-[#25221E] leading-[1.1]">
             Convert Images to WebP. In Bulk.
           </h1>

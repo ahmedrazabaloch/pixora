@@ -1,4 +1,4 @@
-# WebPKit — Bulk Image to WebP Converter
+# Pixora — Bulk Image to WebP Converter
 
 A high-performance, private, client-side web application built with **Next.js (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS** that converts multiple image files from 9 supported input formats into genuine **WebP** files in bulk.
 

@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Protoface Warm Editorial Palette */
+  --bg-main: #F8F3E9;
+  --bg-section: #F5EFE4;
+  --bg-alt: #E6D8C5;
+  --bg-card: #FFFFFF;
+  --border-warm: #E2D8CA;
+  --text-primary: #25221E;
+  --text-secondary: #766E63;
+  --accent-primary: #95653E;
+  --accent-hover: #79502F;
+  --status-success: #2E6B4E;
+  --status-success-bg: #E8F2EC;
+  --status-success-border: #CDE0D4;
+  --status-error: #9E3B33;
+  --status-error-bg: #F8EBEA;
+  --status-error-border: #ECCFCB;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Typography Scale */
+  --font-xs: 11px;
+  --font-sm: 12px;
+  --font-md: 13px;
+  --font-lg: 15px;
+  --font-xl: 16px;
+  --font-2xl: 18px;
+  --font-3xl: 36px;
+  --font-4xl: 56px;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Canvas Root Defaults */
+  --background: var(--bg-main);
+  --foreground: var(--text-primary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F3E9;
+  color: #25221E;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Warm Focus-Visible Ring */
+*:focus-visible {
+  outline: 2px solid #95653E !important;
+  outline-offset: 2px !important;
+}
+
+/* Editorial Text Selection */
+::selection {
+  background-color: #E6D8C5;
+  color: #25221E;
+}
+
+/* Editorial Hyperlink Standard */
+a.proto-link {
+  color: #95653E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+a.proto-link:hover {
+  color: #79502F;
+}
+
+/* Protoface-Style Diagonal Hatched Divider */
+.hatched-divider {
+  width: 100%;
+  height: 48px;
+  background-color: var(--bg-main, #F8F3E9);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 14px,
+    rgba(118, 110, 99, 0.14) 14px,
+    rgba(118, 110, 99, 0.14) 15px
+  );
+  border-top: 1px solid var(--border-warm, #E2D8CA);
+  border-bottom: 1px solid var(--border-warm, #E2D8CA);
 }
